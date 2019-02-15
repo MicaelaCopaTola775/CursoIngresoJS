@@ -18,7 +18,9 @@ function mostrar()
 
 	porcentajeiva=precio*21/100;
 
+
 	totaldecadauno=propina/personas;
 
+	
 	alert("Son "+personas+" personas, el precio es de $"+precio+",mas la propina es de $"+propina+". En total cada uno debera pagar $"+totaldecadauno)
 }
