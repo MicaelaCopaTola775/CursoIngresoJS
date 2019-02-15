@@ -2,16 +2,23 @@ function mostrar()
 {
 	var precio;
 	var porcentaje;
-	var preciofinal;
+	var personas;
+	var propina;
 
-	precio=prompt("Ingrese el precio");
-	porcentaje=prompt("Ingrese el porcentaje");
 
+	personas=prompt("Ingrese la cantidad de personas");
+	precio=prompt("Ingrese el precio de la compra");
+
+	personas=parseInt(personas);
 	precio=parseInt(precio);
-	porcentaje=parseInt(porcentaje);
 
-	descuento=precio*porcentaje/100;
-	preciofinal=precio-descuento;
+	porcentaje=precio*10/100;
 
-	document.getElementById('elPrecioFinal').value=preciofinal
+	propina=precio+porcentaje;
+
+	porcentajeiva=precio*21/100;
+
+	totaldecadauno=propina/personas;
+
+	alert("Son "+personas+" personas, el precio es de $"+precio+",mas la propina es de $"+propina+". En total cada uno debera pagar $"+totaldecadauno)
 }
