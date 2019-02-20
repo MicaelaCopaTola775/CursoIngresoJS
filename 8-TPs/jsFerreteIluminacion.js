@@ -15,16 +15,19 @@ function CalcularPrecio ()
  	var marca;
  	var porcentaje;
  	var descuento;
+ 	var total;
 
  	precio=35;
- 	precio=parseInt(precio);
+ 	//precio=parseInt(precio);
  	porcentaje=parseInt(porcentaje);
  	descuento=parseInt(descuento);
-
- 	total=precio*cantidad
+ 	cantidad=parseInt(cantidad);
+ 	total=parseInt(total);
 
  	cantidad=document.getElementById('Cantidad').value;
  	marca=document.getElementById('Marca').value;
+
+ 	total=precio*cantidad
 
  	if (cantidad>5) 
  	{
@@ -34,12 +37,28 @@ function CalcularPrecio ()
 
  	} else 
  	{
- 		if (cantidad) 
+ 		if (cantidad==5&&marca=="ArgentinaLuz") 
  			{
-
+ 				porcentaje=total*40/100;
+ 				descuento=total-porcentaje;
+ 				document.getElementById('precioDescuento').value=descuento;
  			} else 
  			{
-
+ 				porcentaje=total*30/100;
+ 				descuento=total-porcentaje;
+ 				document.getElementById('precioDescuento').value=descuento
  			}
+ 			
  	}
+ 	if (cantidad==4&&marca=="ArgentinaLuz"||marca=="“FelipeLamparas”") 
+ 				{
+ 					porcentaje=total*25/100;
+ 					descuento=total-porcentaje;
+ 					document.getElementById('precioDescuento').value=descuento;
+
+ 				} else 
+ 				{
+ 					
+ 				}
 }
+
