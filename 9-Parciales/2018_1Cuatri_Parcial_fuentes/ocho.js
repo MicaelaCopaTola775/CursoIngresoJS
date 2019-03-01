@@ -4,7 +4,7 @@ function mostrar()
 	var num,respuesta=true;
 	var contPares=0,contImpares=0,contCeros=0,contNeg=0,contPos=0;
 	var promedio;
-	var 
+	
 
 	while(respuesta==true)
 	{
@@ -15,10 +15,10 @@ function mostrar()
 			num=parseInt(num);
 		} while(num>-100&&num<100);
 
-		if(num/2==0)
+		if(num%2==0)
 		{
 			contPares++;
-		} else 
+		}else 
 		{
 			if (num) 
 			{
@@ -44,5 +44,7 @@ function mostrar()
 		respuesta=confirm();
 
 	}
+
+	document.write("La cantidad de números pares es "+contPares+". La cantidad de positivos es "+acumPos)
 
 }

@@ -21,7 +21,7 @@ function mostrar()
 			nota=parseInt(nota);
 			promedio=nota/cont;
 
-		} while(esNaN(nota)&&(nota<0&&nota>10));
+		} while(nota=="NaN"||(nota<0&&nota>10));
 		
 		if(bandera)
 		{
