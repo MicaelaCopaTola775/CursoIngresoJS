@@ -3,7 +3,9 @@ function mostrar()
 	var cont=0;
 	var sexo;
 	var nota;
-	var max;
+	var max,min;
+	var bandera=true;
+	var promedio;
 
 
 	while(cont<5)
@@ -17,14 +19,28 @@ function mostrar()
 		{
 			nota=prompt("Ingrese su nota");
 			nota=parseInt(nota);
+			promedio=nota/cont;
+
 		} while(esNaN(nota)&&(nota<0&&nota>10));
 		
-		promedio=nota/cont;
-
-		if(nota>max)
+		if(bandera)
 		{
-
+			bandera=false
+			max=nota
+			min=nota
+		} else 
+		{
+			if(nota>max)
+			{
+				max=nota;
+			}
+			if(nota<min)
+			{
+				min=nota;
+			}
 		}
 		
 	}
+
+	alert("El promedio de las notas totales es "+promedio/*+". La nota más baja es "+min+"y el sexo de esa persona es "+sexo+". La cantidad de varones que tuviveron la mayor o igual a 6 son "*/)
 }
