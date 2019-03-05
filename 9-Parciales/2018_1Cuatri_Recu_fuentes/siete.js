@@ -61,7 +61,7 @@ while(respuesta==true)
 alert("El promedio de las velocidades totales es "+promedio+". La velocidad más baja y su tipo de combustible es "+min+tipo+". La cantidad de combustibles liquidos es "+contCom+". La velocidad más alta de los combustibles solidos es "+max);
 */
 
-var cont=0;
+var cont=0,contM=0;
 var nota;
 var bandera=true;
 var suma=0;
@@ -99,11 +99,16 @@ while(cont<5)
 		}
 	}
 
+	if(sexo=="m"&&nota>=6)
+	{
+		contM++;
+	} 
+
 	promedio=suma/cont;
 }
 
 
 
-alert("El promedio de las notas totales es "+promedio+". La nota mas baja y el sexo de esa persona es "+min+sexo);
+alert("El promedio de las notas totales es "+promedio+". La nota mas baja y el sexo de esa persona es "+min+sexo+", cantidad de varones con nota mayor o igual a 6: "+contM);
 
 }
