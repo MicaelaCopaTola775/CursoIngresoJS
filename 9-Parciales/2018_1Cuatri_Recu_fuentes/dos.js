@@ -1,6 +1,6 @@
 function mostrar()
 {
-  var precio;
+  /*var precio;
   var porcentaje;
   var descuento;
   var porcentajeiva;
@@ -18,5 +18,13 @@ function mostrar()
   total=descuento+porcentajeiva;
 
   alert("Tu compra es de $"+precio+",tenes un descuento del %10 queda en $"+descuento+", mas el IVA es $"+total)
-  
-}
+  */
+
+  var nombre;
+  var localidad;
+
+  nombre=elNombre.value;
+  localidad=laLocalidad.value;
+
+  alert("Usted es "+nombre+" y vive en la localidad de "+localidad+".");
+} 

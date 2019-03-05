@@ -1,6 +1,6 @@
 function mostrar()
 {
-	var importe1;
+	/*var importe1;
 	var importe2;
 	var importe3;
 	var importe4;
@@ -81,6 +81,8 @@ function mostrar()
 					total4=importe4+descuento4;
 				}
 		}
+
+		alert("Importe 1: "+total1+", importe 2: "+total2+", importe 3: "+total3+", importe 4: "+total4);*/
 	/*
 	switch(importe1)
 	{
@@ -107,6 +109,29 @@ function mostrar()
 		descuento2=importe3*0.15;
 		break
 	}
-	*/
-	alert("Importe 1: "+total1+", importe 2: "+total2+", importe 3: "+total3+", importe 4: "+total4);
+	*/ 
+	
+	var dia=prompt("Ingrese un dia de la semana");
+	var mensaje;
+
+	switch(dia)
+	{
+		case "sabado":
+		case "domingo":
+			mensaje="buen finde!!";
+		break
+		case "lunes":
+		case "martes":
+		case "miercoles":
+		case "jueves":
+		case "viernes":
+			mensaje="a trabajar!!";
+		break
+		default:
+			mensaje="no es un dia habil";
+		break
+	}
+
+	alert(mensaje);
+
 }

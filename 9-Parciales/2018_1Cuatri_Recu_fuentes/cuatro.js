@@ -1,6 +1,6 @@
 function mostrar()
 {
-	var precio;
+	/*var precio;
 	var libros;
 	var porcentajeDes;
 	var descuento;
@@ -41,7 +41,38 @@ function mostrar()
 
 			}			
  	alert("Usted compró "+libros+" libros y el precio de cada libro es de $"+precio+", el total a pagar es de $"+compra+". Al hacerle el descuento su total quedo en $"+descuento)
-}
+}*/
+
+var num1=prompt("Ingrese el primer numero");
+var num2=prompt("Ingrese el segundo numero");
+var mensaje;
+var suma;
+
+num1=parseInt(num1);
+num2=parseInt(num2);
+
+if (num1==num2) 
+	{
+		mensaje=num1+" "+num2;
+	} else 
+	{
+		if (num1>num2) 
+			{
+				mensaje=num1/num2;
+			} else 
+			{
+
+				suma=num1+num2;
+				mensaje=suma;
+			}
+	}
+
+if (suma<50) 
+	{
+		mensaje="la suma es "+suma+" y es menor a 50"
+	}
+
+alert(mensaje);
 
 }
 

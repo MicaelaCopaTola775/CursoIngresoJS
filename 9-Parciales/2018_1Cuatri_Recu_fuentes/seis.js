@@ -1,6 +1,6 @@
 function mostrar()
 {
-	var pago;
+	/*var pago;
 	var paquete;
 
 	compra=prompt("Ingrese el precio de la compra");
@@ -46,5 +46,19 @@ function mostrar()
 	}
 
 	alert("Compra: "+compra+", Tipo de pago: "+pago+", Tipo de paquete: "+paquete+", Descuento: "+total+", Aumento: "+aumento);
-    
+    */
+
+    var hora = document.getElementById('laHora').value;
+    var mensaje;
+
+    switch(hora)
+    {
+    	if (hora>5&&hora<12)
+    	{
+    		mensaje="es de mañana";
+    	}
+    }
+
+alert(mensaje);
+
 }

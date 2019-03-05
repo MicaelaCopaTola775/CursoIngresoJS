@@ -1,6 +1,6 @@
 function mostrar()
 {
-var cont=0,contCom=0;
+/*var cont=0,contCom=0;
 var respuesta=true;
 var num,tipo,promedio;
 var bandera=true;
@@ -59,5 +59,51 @@ while(respuesta==true)
 }
 
 alert("El promedio de las velocidades totales es "+promedio+". La velocidad más baja y su tipo de combustible es "+min+tipo+". La cantidad de combustibles liquidos es "+contCom+". La velocidad más alta de los combustibles solidos es "+max);
+*/
+
+var cont=0;
+var nota;
+var bandera=true;
+var suma=0;
+
+while(cont<5)
+{
+
+	cont++;
+	do
+	{
+		sexo=prompt("Ingrese su sexo");
+	} while (sexo!="f"&&sexo!="m");
+	do
+	{
+		nota=prompt("Ingrese su nota");
+		nota=parseInt(nota);
+	} while (isNaN(nota)||(nota<0||nota>10));
+
+	suma+=nota;
+
+	if (bandera)
+	{
+		bandera=false;
+		min=nota;
+		max=nota;
+	} else
+	{
+		if (nota<min)
+		{
+			min=nota;
+		}
+		if (nota>max)
+		{
+			max=nota;
+		}
+	}
+
+	promedio=suma/cont;
+}
+
+
+
+alert("El promedio de las notas totales es "+promedio+". La nota mas baja y el sexo de esa persona es "+min+sexo);
 
 }
