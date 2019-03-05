@@ -1,11 +1,12 @@
 function mostrar()
 {
-	var cont=0;
+	var cont=1;
 
-	while(cont<10)
+	while(cont<11)
 	{
-		//alert(cont++);
 		//cont++;
+		//alert(cont++);
+		
 		console.log(cont++);
 	}
 

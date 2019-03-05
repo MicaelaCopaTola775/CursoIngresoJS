@@ -1,31 +1,26 @@
 function mostrar()
 {
-
-	var contador=0;
-	var acumulador=0;
 	var respuesta=true;
 	var num;
-
-
-///document.getElementById('suma').value=acumulador;
-//document.getElementById('promedio').value=acumulador/contador;
-
+	var Suma=0;
+	var cont=0;
+	
 	while(respuesta==true)
 	{
-		contador++;
+		cont++;
+
 		do
 		{
-			num=prompt("Ingrese el número");
+			num=prompt("Ingrese el numero");
 			num=parseInt(num);
-			
-		}while(num="NaN");
+		} while (isNaN(num));
 
-	acumulador+=num;
-	respuesta=confirm();
+		Suma+=num;
 
-	} 
-
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
+		respuesta=confirm("¿Quiere seguir?");
+	}
+	
 	//respuesta=confirm();
+	document.getElementById('suma').value=Suma;
+	document.getElementById('promedio').value=Suma/cont;
 }//FIN DE LA FUNCIÓN

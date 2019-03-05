@@ -1,58 +1,39 @@
 function mostrar()
 {
-
-	/*var contador=0;
-	// declarar variables
-	
-	var respuesta='si';
-
-	while(respuesta!='no')
-	{
-		
-	
-	}
-*/
-
-	var contador=0;
-	var max;
-	var min;
+	var cont=0;
+	var min,max;
 	var bandera=true;
+	var respuesta=true;
 	var num;
-	var rta=true;
-	// declarar variables
-	
-	//var respuesta='si';
 
-	//while(respuesta!='no')
-	while(rta==true)
+	while(respuesta==true)
 	{
-	do
-	{
-		num=prompt("Ingrese el numero");
-		num=parseInt(num);
-	}while(esNaN(num));
-
-	if(bandera)
-	{
-		bandera=false;
-		max=num;
-		min=num;
-	} else 
-	{
-		if(num>max)
+		do
 		{
+			num=prompt("Ingrese un numero");
+		} while (isNaN(num));
+
+		if (bandera)
+		{
+			bandera=false;
 			max=num;
-		}
-		if(num<min)
-		{
 			min=num;
+		} else 
+		{
+			if (num>max)
+			{
+				max=num;
+			}
+			if (num<min)
+			{
+				min=num;
+			}
 		}
+
+		respuesta=confirm("¿Quiere seguir?");
 	}
 	
-	}
-rta=confirm();
-
-
-
+document.getElementById('minimo').value=min;
+document.getElementById('maximo').value=max;
 
 }//FIN DE LA FUNCIÓN

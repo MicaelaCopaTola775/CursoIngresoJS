@@ -1,43 +1,44 @@
 function mostrar()
 {
-	var num,respuesta=true;
-	var acumNeg=0,acumPos=0;
+	var respuesta=true;
+	var num;
 	var contNeg=0,contPos=0,contCeros=0,contPares=0;
-	//declarar contadores y variables 
+	var acumNeg=0,acumPos=0;
 
 	while(respuesta==true)
 	{
 		do
 		{
-			num=prompt("Ingrese el número");
+			num=prompt("Ingrese el numero");
 			num=parseInt(num);
-		} while (esNaN(num));
+		} while(isNaN(num));
 
-		if(num<0)
+		if (num<0) 
 		{
-			acumNeg=acumNeg+num;
 			contNeg++;
+			acumNeg+=num;
 		} else 
 		{
-			if(num>0)
+			if (num>0)
 			{
-				acumPos+=num;
 				contPos++;
+				acumPos+=num;
 			} else 
 			{
 				contCeros++;
 			}
 		}
-	
-	if(num%2==0)
-	{
-		contPares++;
+
+		if (num%2==0) 
+		{
+			contPares++;
+		}
+
+		promedioPos=acumPos/contPos;
+		promedioNeg=acumNeg/contNeg;
+		diferencia=acumPos-acumNeg;
+
+		respuesta=confirm("¿quiere seguir?");
 	}
-
-	respuesta=confirm();
-
-	}
-
-	document.write("");
-
+document.write(" Suma de los negativos: "+acumNeg+", Suma de los positivos: "+acumPos+", Cantidad de Positivos: "+contPos+", Cantidad de negativos: "+contNeg+", Cantidad de ceros: "+contCeros+", Cantidad de pares: "+contPares+", Promedio de positivos: "+promedioPos+", Promedio de negativos: "+promedioNeg+", Diferencia entre positivos y negativos: "+diferencia)
 }//FIN DE LA FUNCIÓN
